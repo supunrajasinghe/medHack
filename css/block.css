@@ -1,0 +1,72 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+#SocialMediaTop1{
+	height:50px;
+	width:50px;
+	margin:auto;
+	padding:10px;
+	color:#000000;
+}
+
+#SocialMediaTop1:hover{
+	height:50px;
+	width:50px;
+	margin:auto;
+	padding:10px;
+	background-color:#3B5998;
+	color:#ffffff;
+}
+
+#SocialMediaTop2{
+	height:50px;
+	width:50px;
+	margin:auto;
+	padding:10px;
+	color:#000000;
+}
+
+#SocialMediaTop2:hover{
+	height:50px;
+	width:50px;
+	margin:auto;
+	padding:10px;
+	background-color:#61c7ee;
+	color:#ffffff;
+}
+
+#SocialMediaTop3{
+	height:50px;
+	width:50px;
+	margin:auto;
+	padding:10px;
+	color:#000000;
+}
+
+#SocialMediaTop3:hover{
+	height:50px;
+	width:50px;
+	margin:auto;
+	padding:10px;
+	background-color:#e70a64;
+	color:#ffffff;
+}
+
+#SocialMediaTop4{
+	height:50px;
+	width:50px;
+	margin:auto;
+	padding:10px;
+	color:#000000;
+}
+
+#SocialMediaTop4:hover{
+	height:50px;
+	width:50px;
+	margin:auto;
+	padding:10px;
+	background-color:#e31010;
+	color:#ffffff;
+}
