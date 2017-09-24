@@ -24,9 +24,9 @@
             <a class="navbar-brand" href="#">WebSiteName</a>
           </div>
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Call Ambulance</a></li>
-            <li><a href="#">Video Archieve</a></li>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="callAmbulance.html">Call Ambulance</a></li>
+            <li><a href="videoArchieve.html">Video Archieve</a></li>
             <li><a href="#">medical centers</a></li>
           </ul>
           <button class="btn btn-danger navbar-btn">Ask Question</button>
@@ -41,40 +41,53 @@
     <!--end header-->
 
     <!--stat content-->
-    <div class="row" id="content">
+    <div class="row" id="content" style="margin-top:80px; min-height:500px">
+      <center>
+				<div style="width:500px;">
+        <form>
+          <div class="form-group">
+				    <input type="text" name="country" id="country" class="form-control" placeholder="Enter city name">
+          </div>
+          <input type="submit" name="submit" value="SELECT">
+        </form>
+        </div>
+				<div id="countryList"></div>
 
+				<script>
+					$(document).ready(function(){
+						$('#country').keyup(function(){
+							var query = $(this).val();
+							if(query!='')
+							{
+								$.ajax({
+									url:"search.php",
+									method:"POST",
+									data:{query:query},
+									success:function(data)
+									{
+										$('#countryList').fadeIn();
+										$('#countryList').html(data);
+									}
+								});
+							}else{
+                $('#countryList').fadeOut();
+              }
+						});
+
+						$(function(){
+						  $('#countryList').on('click','li',function(){
+						    $('#country').val($(this).text());
+						    $('#countryList').fadeOut();
+						  });
+						});
+					});
+				</script>
+			</center>
     </div>
     <!--end content-->
 
     <!--start footer-->
     <div class="row" id="footer" style="margin-top:15px">
-      <div clas="row">
-      <div class="col-md-12">
-        <div class="col-md-3">
-          <center>
-          <img id="footerImg" src="Images/moh.png">
-          </center>
-        </div>
-
-        <div class="col-md-3">
-          <center>
-          <img id="footerImg"  src="Images/echanneling_logo.png">
-          </center>
-        </div>
-
-        <div class="col-md-3">
-          <center>
-          <img id="footerImg" src="Images/mobitel_logo.png">
-          </center>
-        </div>
-
-        <div class="col-md-3">
-          <center>
-          <img id="footerImg" src="Images/icta-logo.png">
-          </center>
-        </div>
-      </div>
-      </div>
       <div class="row">
         <div class="col-md-6" >
           <center>
